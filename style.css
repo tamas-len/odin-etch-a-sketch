@@ -3,14 +3,19 @@
     width: 100%;
 }
 
+.container {
+    max-width: 285px;
+    margin: auto;
+}
+
 .grid {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .box {
-    width: 5px;
-    height: 5px;
+    min-width: 15px;
+    height: 15px;
     border: 1px solid black;
-
     flex: 1;
 }

@@ -7,6 +7,7 @@ const generateBtn = document.querySelector("#generate");
 function generateGrid(grid)
 {
     let htmlToAdd = "";
+    let grid = prompt("grid size");
 
     for (let i = 0; i < grid; i++)
     {
