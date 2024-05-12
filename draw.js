@@ -25,16 +25,12 @@ function generateGrid()
     boxes = document.querySelectorAll('.box');
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].addEventListener('mouseover', (e) => {
-            e.target.textContent = 'O';
             e.target.style.backgroundColor = "red";
-            console.log('works');
         });
     }
 
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].addEventListener('mouseleave', (e) => {
-            e.target.style.backgroundColor = "red";
-            console.log('works');
         });
     }
 }
