@@ -1,20 +1,21 @@
-let gridSize = 16*16;
-
 const gridContainer = document.querySelector(".grid");
 const generateBtn = document.querySelector("#generate");
 
 
-function generateGrid(grid)
+function generateGrid()
 {
     let htmlToAdd = "";
     let grid = prompt("grid size");
+    let gridSize = grid*grid;
 
-    for (let i = 0; i < grid; i++)
+    let gridWidth = 270/grid;
+
+    for (let i = 0; i < gridSize; i++)
     {
-        htmlToAdd += '<div class="box"></div>';
+        htmlToAdd += `<div class="box" style="min-width: ${gridWidth}px; height: ${gridWidth}px"></div>`;
     }
 
     gridContainer.innerHTML = htmlToAdd;
 }
 
-generateBtn.addEventListener('click', generateGrid(gridSize));
+generateBtn.addEventListener('click', generateGrid());
