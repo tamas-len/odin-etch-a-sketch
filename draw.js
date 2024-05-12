@@ -2,12 +2,12 @@ const gridContainer = document.querySelector(".grid");
 const generateBtn = document.querySelector("#generate");
 let boxes = document.querySelectorAll('.box');
 
-const greenBtn = document.querySelector('#green');
-const yellwoBtn = document.querySelector('#yellow');
-const blackBtn = document.querySelector('#black');
-const whiteBtn = document.querySelector('#white');
-const blueBtn = document.querySelector('#blue');
-const redBtn = document.querySelector('#red');
+document.querySelector('#green').addEventListener('click', () => {color = 'green'});
+document.querySelector('#yellow').addEventListener('click', () => {color = 'yellow'});
+document.querySelector('#black').addEventListener('click', () => {color = 'black'});
+document.querySelector('#white').addEventListener('click', () => {color = 'white'});
+document.querySelector('#blue').addEventListener('click', () => {color = 'blue'});
+document.querySelector('#red').addEventListener('click', () => {color = 'red'});
 
 let color = "red";
 
@@ -42,10 +42,3 @@ function generateGrid()
         });
     }
 }
-
-greenBtn.addEventListener('click', () => {color = 'green'});
-yellwoBtn.addEventListener('click', () => {color = 'yellow'});
-blackBtn.addEventListener('click', () => {color = 'black'});
-whiteBtn.addEventListener('click', () => {color = 'white'});
-blueBtn.addEventListener('click', () => {color = 'blue'});
-redBtn.addEventListener('click', () => {color = 'red'});
