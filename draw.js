@@ -19,6 +19,13 @@ function generateGrid()
 {
     let htmlToAdd = "";
     let grid = prompt("grid size");
+    if(grid > 100)
+    {
+        while(grid > 100)
+        {
+            grid = prompt("too large, give me a number less than 100");
+        }
+    }
     let gridSize = grid*grid;
 
     let gridWidth = 480/grid;
