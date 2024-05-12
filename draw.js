@@ -1,6 +1,9 @@
 const gridContainer = document.querySelector(".grid");
 const generateBtn = document.querySelector("#generate");
 
+let grid = 0;
+
+generateBtn.addEventListener('click', generateGrid);
 
 function generateGrid()
 {
@@ -17,5 +20,3 @@ function generateGrid()
 
     gridContainer.innerHTML = htmlToAdd;
 }
-
-generateBtn.addEventListener('click', generateGrid());
