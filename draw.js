@@ -11,11 +11,11 @@ function generateGrid()
     let grid = prompt("grid size");
     let gridSize = grid*grid;
 
-    let gridWidth = 270/grid;
+    let gridWidth = 480/grid;
 
-    for (let i = 0; i < gridSize; i++)
+    for (let i = 1; i < gridSize; i++)
     {
-        htmlToAdd += `<div class="box" style="min-width: ${gridWidth}px; height: ${gridWidth}px"></div>`;
+        htmlToAdd += `<div class="box" style="min-width: ${gridWidth}px; height: ${gridWidth}px; margin: 0px; padding: 0px"></div>`;
     }
 
     gridContainer.innerHTML = htmlToAdd;
