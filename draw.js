@@ -1,5 +1,7 @@
 const gridContainer = document.querySelector(".grid");
 const generateBtn = document.querySelector("#generate");
+let boxes = document.querySelectorAll('.box');
+
 
 let grid = 0;
 
@@ -19,4 +21,19 @@ function generateGrid()
     }
 
     gridContainer.innerHTML = htmlToAdd;
+
+    boxes = document.querySelectorAll('.box');
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].addEventListener('mouseover', (e) => {
+            e.target.textContent = 'O';
+            console.log('works');
+        });
+    }
+
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].addEventListener('mouseleave', (e) => {
+            e.target.textContent = '';
+            console.log('works');
+        });
+    }
 }
