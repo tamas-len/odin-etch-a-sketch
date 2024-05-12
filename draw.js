@@ -2,6 +2,14 @@ const gridContainer = document.querySelector(".grid");
 const generateBtn = document.querySelector("#generate");
 let boxes = document.querySelectorAll('.box');
 
+const greenBtn = document.querySelector('#green');
+const yellwoBtn = document.querySelector('#yellow');
+const blackBtn = document.querySelector('#black');
+const whiteBtn = document.querySelector('#white');
+const blueBtn = document.querySelector('#blue');
+const redBtn = document.querySelector('#red');
+
+let color = "red";
 
 let grid = 0;
 
@@ -25,7 +33,7 @@ function generateGrid()
     boxes = document.querySelectorAll('.box');
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].addEventListener('mouseover', (e) => {
-            e.target.style.backgroundColor = "red";
+            e.target.style.backgroundColor = color;
         });
     }
 
@@ -34,3 +42,10 @@ function generateGrid()
         });
     }
 }
+
+greenBtn.addEventListener('click', () => {color = 'green'});
+yellwoBtn.addEventListener('click', () => {color = 'yellow'});
+blackBtn.addEventListener('click', () => {color = 'black'});
+whiteBtn.addEventListener('click', () => {color = 'white'});
+blueBtn.addEventListener('click', () => {color = 'blue'});
+redBtn.addEventListener('click', () => {color = 'red'});
