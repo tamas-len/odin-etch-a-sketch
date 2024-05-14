@@ -1,4 +1,4 @@
-const gridContainer = document.querySelector(".grid");
+const gridContainer = document.querySelector(".container");
 const generateBtn = document.querySelector("#generate");
 let boxes = document.querySelectorAll('.box');
 
@@ -28,11 +28,11 @@ function generateGrid()
     }
     let gridSize = grid*grid;
 
-    let gridWidth = 480/grid;
+    let gridWidth = 100/grid;
 
-    for (let i = 1; i < gridSize; i++)
+    for (let i = 0; i < gridSize; i++)
     {
-        htmlToAdd += `<div class="box" style="min-width: ${gridWidth}px; height: ${gridWidth}px; margin: 0px; padding: 0px"></div>`;
+        htmlToAdd += `<div class="box" style="width: ${gridWidth}%; height: ${gridWidth}%; margin: 0px; padding: 0px"></div>`;
     }
 
     gridContainer.innerHTML = htmlToAdd;
